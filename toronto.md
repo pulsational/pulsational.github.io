@@ -16,8 +16,10 @@ The south part of 404 is connecting to DVP(Don Valley Parkway) connecting to Tor
 #### TTC, GO train and presto card
 One prepaid presto card can be used to take TTC and Go train in case you need it. TTC includes subway and buses. If you live in the downtown Toronto, TTC is pretty convinient. You can find maps anywhere, such as [The official website](https://cdn.ttc.ca/-/media/Project/TTC/DevProto/Images/Home/Routes-and-Schedules/Landing-page-pdfs/TTC_SubwayStreetcarMap_2021-11.pdf?rev=b9ab97e4c76549549c0cb09c210c508e).
 #### Rental cars
-
+Enterprise and Avis you can use the company code to have a discount. Remember to bring you badge.
 ### Groceries
-
+I am not very familiar with Downtown Toronto area but sure you can find many stores. Besides, there is a high chance you can find an authentic Indian market somewhere!
+- Drugs
+Equivilant to CVS or Walgreen, in Canada we have "Shoppers Drug Mart". 
 
 ## Day trip destinations
