@@ -1,2 +1,23 @@
 # Hi Anshul, Welcome to Toronto!
-This page is acting as a local tour guide, providing some tips as well as several nice places that I visited. Hope you'll like it.
+This page serves as your personal tour guide, offering tips and highlighting several great places I've explored. Keep in mind, it's heavily influenced by my own preferences!
+## Life in toronto
+### Overview of Toronto
+Toronto is a city that borders Lake Ontario to the south. However, when we say the word "Toronto", it could mean the Toronto city, or GTA: the Greater Toronto Area. GTA has several major cities:
+- Toronto city
+- North: Vaughan, Richmond Hill, Markham
+- West: Brampton, Missisauga
+### Transport
+#### Highways
+The highways are pretty simple to understand. 
+- 401 and 404, two N-S bound HWYs
+The south part of 404 is connecting to DVP(Don Valley Parkway) connecting to Toronto downtown.
+- 401, QEW(Queen Elizabeth Way) two E-W bound HWYs. 
+- The only highway with toll is 407: remember, **never take 407!**  
+#### TTC, GO train and presto card
+One prepaid presto card can be used to take TTC and Go train in case you need it. TTC includes subway and buses. If you live in the downtown Toronto, TTC is pretty convinient. You can find maps anywhere, such as [The official website](https://cdn.ttc.ca/-/media/Project/TTC/DevProto/Images/Home/Routes-and-Schedules/Landing-page-pdfs/TTC_SubwayStreetcarMap_2021-11.pdf?rev=b9ab97e4c76549549c0cb09c210c508e).
+#### Rental cars
+
+### Groceries
+
+
+## Day trip destinations
