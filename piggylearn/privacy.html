@@ -4,218 +4,624 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - PiggyLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-green: #4CAF50;
+            --dark-green: #2e7d32;
+            --medium-green: #388e3c;
+            --light-green: #e8f5e9;
+            --pale-green: #f1f8e9;
+            --gold: #FFD700;
+            --gold-dark: #FFA000;
+            --text-dark: #2d3748;
+            --text-medium: #4a5568;
+            --text-light: #718096;
+            --bg-cream: #fafdf7;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--bg-cream) 0%, #f0f7e6 50%, var(--bg-cream) 100%);
+            min-height: 100vh;
         }
+
+        /* Decorative background elements */
+        .bg-decoration {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.04;
+        }
+
+        .bg-coin-1 {
+            top: 10%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .bg-coin-2 {
+            top: 60%;
+            right: 8%;
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .bg-coin-3 {
+            bottom: 20%;
+            left: 10%;
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: float 7s ease-in-out infinite 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #fff;
-            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
         }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--gold), var(--primary-green));
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 24px 20px;
+                border-radius: var(--radius-md);
+            }
+        }
+
+        /* Header Styles */
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed var(--light-green);
+            position: relative;
         }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--pale-green) 100%);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .logo-container::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 50%;
+            border: 2px dashed var(--primary-green);
+            opacity: 0.3;
+        }
+
         .logo {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 3.5em;
+            line-height: 1;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
         }
+
+        .brand-name {
+            font-size: 1.1em;
+            font-weight: 800;
+            color: var(--primary-green);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
         h1 {
-            color: #2e7d32;
+            color: var(--dark-green);
+            font-size: 2.2em;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-light);
+            font-size: 0.9em;
+            background: var(--pale-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
+        .last-updated::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--primary-green);
+            border-radius: 50%;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, var(--light-green) 0%, #c8e6c9 100%);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            border: 1px solid rgba(76, 175, 80, 0.2);
+            position: relative;
+        }
+
+        .summary-box::before {
+            content: 'Quick Summary';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--primary-green);
+            color: white;
+            font-size: 0.75em;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary-box p {
+            margin: 0;
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+
+        /* Section Styles */
+        h2 {
+            color: var(--dark-green);
+            font-size: 1.4em;
+            font-weight: 800;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-green);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(to bottom, var(--primary-green), var(--gold));
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--medium-green);
+            font-size: 1.1em;
+            font-weight: 700;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 3px solid var(--gold);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-medium);
+        }
+
+        ul {
+            margin-left: 0;
+            margin-bottom: 16px;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 28px;
+            position: relative;
+            color: var(--text-medium);
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(135deg, var(--primary-green), var(--gold));
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        li strong {
+            color: var(--text-dark);
+        }
+
+        /* Info Box */
+        .highlight {
+            background: linear-gradient(135deg, var(--light-green) 0%, #c8e6c9 100%);
+            padding: 20px 24px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+            border-left: 4px solid var(--primary-green);
+            position: relative;
+        }
+
+        .highlight p {
+            margin: 0;
+            color: var(--dark-green);
+        }
+
+        .highlight.family-safe {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left-color: #2196F3;
+        }
+
+        .highlight.family-safe p {
+            color: #1565c0;
+        }
+
+        /* Links */
+        a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--dark-green);
+            text-decoration: underline;
+        }
+
+        /* Contact Box */
+        .contact {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            margin-top: 36px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+
+        .contact-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-green);
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-top: 8px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .email-link:hover {
+            background: var(--dark-green);
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        .footer-logo {
             font-size: 2em;
             margin-bottom: 10px;
         }
-        .last-updated {
-            color: #666;
+
+        .footer p {
+            margin-bottom: 4px;
+            color: var(--text-light);
+        }
+
+        .footer-links {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            font-weight: 600;
             font-size: 0.9em;
         }
-        h2 {
-            color: #2e7d32;
-            font-size: 1.4em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #e0e0e0;
+
+        .footer-links a:hover {
+            color: var(--primary-green);
         }
-        h3 {
-            color: #388e3c;
-            font-size: 1.1em;
-            margin-top: 20px;
-            margin-bottom: 10px;
+
+        /* Third Party Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
         }
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
+
+        .service-item {
+            background: var(--pale-green);
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.95em;
         }
-        ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
+
+        .service-item strong {
+            color: var(--dark-green);
         }
-        li {
-            margin-bottom: 8px;
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .logo-container {
+                width: 80px;
+                height: 80px;
+            }
+
+            .logo {
+                font-size: 2.8em;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
-        .highlight {
-            background-color: #e8f5e9;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #4CAF50;
-        }
-        .contact {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-        .contact a {
-            color: #2e7d32;
-            text-decoration: none;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            color: #666;
-            font-size: 0.9em;
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            .bg-decoration {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Decorative background elements -->
+    <div class="bg-decoration bg-coin-1"></div>
+    <div class="bg-decoration bg-coin-2"></div>
+    <div class="bg-decoration bg-coin-3"></div>
+
     <div class="container">
-        <div class="header">
-            <div class="logo">🐷</div>
-            <h1>PiggyLearn Privacy Policy</h1>
-            <p class="last-updated">Last Updated: December 16, 2025</p>
+        <div class="card">
+            <div class="header">
+                <div class="logo-container">
+                    <div class="logo">&#x1F437;</div>
+                </div>
+                <div class="brand-name">PiggyLearn</div>
+                <h1>Privacy Policy</h1>
+                <span class="last-updated">Last Updated: December 16, 2025</span>
+            </div>
+
+            <div class="summary-box">
+                <p>PiggyLearn is a family finance education app. We collect minimal data needed to provide the service, we don't sell your data, and parents have full control over their children's accounts.</p>
+            </div>
+
+            <h2>1. Introduction</h2>
+            <p>Welcome to PiggyLearn ("we," "our," or "us"). We are committed to protecting your privacy and the privacy of your children. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+            <p>PiggyLearn is designed to help families teach children about money management through a simulated banking experience. <strong>No real money is involved.</strong></p>
+
+            <h2>2. Information We Collect</h2>
+
+            <h3>2.1 Information You Provide</h3>
+            <ul>
+                <li><strong>Account Information:</strong> When you create an account, we collect your name, email address, and profile information from your Google account (if using Google Sign-In).</li>
+                <li><strong>Child Account Information:</strong> Parents may create accounts for children, including the child's name and a PIN for login.</li>
+                <li><strong>Bank and Transaction Data:</strong> All simulated bank accounts, balances, and transactions you create within the app.</li>
+            </ul>
+
+            <h3>2.2 Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Device Information:</strong> Device type, operating system, and unique device identifiers for push notifications.</li>
+                <li><strong>Usage Data:</strong> How you interact with the app, features used, and error logs to improve our service.</li>
+            </ul>
+
+            <h3>2.3 Information We Do NOT Collect</h3>
+            <ul>
+                <li>Real financial or banking information</li>
+                <li>Credit card or payment card numbers (subscriptions handled by Apple/Google)</li>
+                <li>Location data</li>
+                <li>Contacts or address book</li>
+                <li>Photos or media (unless you explicitly upload a profile picture)</li>
+            </ul>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide and maintain the PiggyLearn service</li>
+                <li>Create and manage user accounts</li>
+                <li>Process simulated transactions within family banks</li>
+                <li>Send push notifications (if enabled) for allowances, payments, etc.</li>
+                <li>Provide customer support</li>
+                <li>Improve and optimize our app</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+
+            <h2>4. Children's Privacy (COPPA Compliance)</h2>
+            <div class="highlight family-safe">
+                <p>We take children's privacy seriously and comply with the Children's Online Privacy Protection Act (COPPA).</p>
+            </div>
+            <ul>
+                <li><strong>Parental Consent:</strong> Children under 13 can only use PiggyLearn through accounts created and managed by their parents.</li>
+                <li><strong>Parental Control:</strong> Parents have full visibility and control over their children's accounts, including the ability to view all transactions and delete the account.</li>
+                <li><strong>Limited Data:</strong> We collect only the child's name (chosen by the parent) and a PIN for login. No email or other personal information is required from children.</li>
+                <li><strong>No Advertising:</strong> We do not display targeted advertising to children.</li>
+                <li><strong>Parental Rights:</strong> Parents can review, modify, or delete their child's information at any time through the app or by contacting us.</li>
+            </ul>
+
+            <h2>5. Data Sharing and Disclosure</h2>
+            <p><strong>We do not sell your personal information.</strong></p>
+            <p>We may share information only in these limited circumstances:</p>
+            <ul>
+                <li><strong>Within Your Family Bank:</strong> Information is shared among members of your family bank as part of the app's functionality.</li>
+                <li><strong>Service Providers:</strong> We use trusted third-party services (AWS, Firebase) to host and operate our app. These providers are contractually obligated to protect your data.</li>
+                <li><strong>Legal Requirements:</strong> We may disclose information if required by law or to protect our rights and safety.</li>
+            </ul>
+
+            <h2>6. Data Security</h2>
+            <p>We implement appropriate technical and organizational measures to protect your information:</p>
+            <ul>
+                <li>Data encryption in transit (HTTPS/TLS)</li>
+                <li>Secure cloud infrastructure (AWS)</li>
+                <li>Access controls and authentication</li>
+                <li>Regular security assessments</li>
+            </ul>
+            <p>However, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
+
+            <h2>7. Data Retention</h2>
+            <p>We retain your information for as long as your account is active or as needed to provide services. You can delete your account at any time through the app settings, which will remove your data from our active systems.</p>
+
+            <h2>8. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of your personal data</li>
+                <li><strong>Correction:</strong> Update or correct your information</li>
+                <li><strong>Deletion:</strong> Delete your account and associated data</li>
+                <li><strong>Opt-out:</strong> Disable push notifications at any time</li>
+            </ul>
+            <p>To exercise these rights, contact us at the email below or use the in-app settings.</p>
+
+            <h2>9. Third-Party Services</h2>
+            <p>Our app uses the following third-party services:</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <strong>Google Sign-In</strong><br>
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+                </div>
+                <div class="service-item">
+                    <strong>Firebase</strong><br>
+                    <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+                </div>
+                <div class="service-item">
+                    <strong>RevenueCat</strong><br>
+                    <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+                </div>
+                <div class="service-item">
+                    <strong>Apple / Google Play</strong><br>
+                    App distribution & payments
+                </div>
+            </div>
+
+            <h2>10. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy in the app and updating the "Last Updated" date. Your continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+            <h2>11. Contact Us</h2>
+            <div class="contact">
+                <p class="contact-title">Have questions about our Privacy Policy?</p>
+                <p>We're here to help!</p>
+                <a href="mailto:piggylearnbank@gmail.com" class="email-link">
+                    <span>piggylearnbank@gmail.com</span>
+                </a>
+            </div>
         </div>
 
-        <div class="highlight">
-            <strong>Summary:</strong> PiggyLearn is a family finance education app. We collect minimal data needed to provide the service, we don't sell your data, and parents have full control over their children's accounts.
-        </div>
-
-        <h2>1. Introduction</h2>
-        <p>Welcome to PiggyLearn ("we," "our," or "us"). We are committed to protecting your privacy and the privacy of your children. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
-        <p>PiggyLearn is designed to help families teach children about money management through a simulated banking experience. <strong>No real money is involved.</strong></p>
-
-        <h2>2. Information We Collect</h2>
-
-        <h3>2.1 Information You Provide</h3>
-        <ul>
-            <li><strong>Account Information:</strong> When you create an account, we collect your name, email address, and profile information from your Google account (if using Google Sign-In).</li>
-            <li><strong>Child Account Information:</strong> Parents may create accounts for children, including the child's name and a PIN for login.</li>
-            <li><strong>Bank and Transaction Data:</strong> All simulated bank accounts, balances, and transactions you create within the app.</li>
-        </ul>
-
-        <h3>2.2 Information Collected Automatically</h3>
-        <ul>
-            <li><strong>Device Information:</strong> Device type, operating system, and unique device identifiers for push notifications.</li>
-            <li><strong>Usage Data:</strong> How you interact with the app, features used, and error logs to improve our service.</li>
-        </ul>
-
-        <h3>2.3 Information We Do NOT Collect</h3>
-        <ul>
-            <li>Real financial or banking information</li>
-            <li>Credit card or payment card numbers (subscriptions handled by Apple/Google)</li>
-            <li>Location data</li>
-            <li>Contacts or address book</li>
-            <li>Photos or media (unless you explicitly upload a profile picture)</li>
-        </ul>
-
-        <h2>3. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
-        <ul>
-            <li>Provide and maintain the PiggyLearn service</li>
-            <li>Create and manage user accounts</li>
-            <li>Process simulated transactions within family banks</li>
-            <li>Send push notifications (if enabled) for allowances, payments, etc.</li>
-            <li>Provide customer support</li>
-            <li>Improve and optimize our app</li>
-            <li>Comply with legal obligations</li>
-        </ul>
-
-        <h2>4. Children's Privacy (COPPA Compliance)</h2>
-        <div class="highlight">
-            <p>We take children's privacy seriously and comply with the Children's Online Privacy Protection Act (COPPA).</p>
-        </div>
-        <ul>
-            <li><strong>Parental Consent:</strong> Children under 13 can only use PiggyLearn through accounts created and managed by their parents.</li>
-            <li><strong>Parental Control:</strong> Parents have full visibility and control over their children's accounts, including the ability to view all transactions and delete the account.</li>
-            <li><strong>Limited Data:</strong> We collect only the child's name (chosen by the parent) and a PIN for login. No email or other personal information is required from children.</li>
-            <li><strong>No Advertising:</strong> We do not display targeted advertising to children.</li>
-            <li><strong>Parental Rights:</strong> Parents can review, modify, or delete their child's information at any time through the app or by contacting us.</li>
-        </ul>
-
-        <h2>5. Data Sharing and Disclosure</h2>
-        <p><strong>We do not sell your personal information.</strong></p>
-        <p>We may share information only in these limited circumstances:</p>
-        <ul>
-            <li><strong>Within Your Family Bank:</strong> Information is shared among members of your family bank as part of the app's functionality.</li>
-            <li><strong>Service Providers:</strong> We use trusted third-party services (AWS, Firebase) to host and operate our app. These providers are contractually obligated to protect your data.</li>
-            <li><strong>Legal Requirements:</strong> We may disclose information if required by law or to protect our rights and safety.</li>
-        </ul>
-
-        <h2>6. Data Security</h2>
-        <p>We implement appropriate technical and organizational measures to protect your information:</p>
-        <ul>
-            <li>Data encryption in transit (HTTPS/TLS)</li>
-            <li>Secure cloud infrastructure (AWS)</li>
-            <li>Access controls and authentication</li>
-            <li>Regular security assessments</li>
-        </ul>
-        <p>However, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
-
-        <h2>7. Data Retention</h2>
-        <p>We retain your information for as long as your account is active or as needed to provide services. You can delete your account at any time through the app settings, which will remove your data from our active systems.</p>
-
-        <h2>8. Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li><strong>Access:</strong> Request a copy of your personal data</li>
-            <li><strong>Correction:</strong> Update or correct your information</li>
-            <li><strong>Deletion:</strong> Delete your account and associated data</li>
-            <li><strong>Opt-out:</strong> Disable push notifications at any time</li>
-        </ul>
-        <p>To exercise these rights, contact us at the email below or use the in-app settings.</p>
-
-        <h2>9. Third-Party Services</h2>
-        <p>Our app uses the following third-party services:</p>
-        <ul>
-            <li><strong>Google Sign-In:</strong> For authentication (<a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>)</li>
-            <li><strong>Firebase:</strong> For push notifications and analytics (<a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>)</li>
-            <li><strong>RevenueCat:</strong> For subscription management (<a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy</a>)</li>
-            <li><strong>Apple App Store / Google Play:</strong> For app distribution and payments</li>
-        </ul>
-
-        <h2>10. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy in the app and updating the "Last Updated" date. Your continued use of the app after changes constitutes acceptance of the updated policy.</p>
-
-        <h2>11. Contact Us</h2>
-        <div class="contact">
-            <p>If you have questions about this Privacy Policy or our data practices, please contact us:</p>
-            <p><strong>Email:</strong> <a href="mailto:piggylearnbank@gmail.com">piggylearnbank@gmail.com</a></p>
-            <p><strong>App:</strong> PiggyLearn - Family Finance</p>
-        </div>
-
-        <div class="footer">
+        <footer class="footer">
+            <div class="footer-logo">&#x1F437;</div>
+            <p><strong>PiggyLearn</strong> - Family Finance Education</p>
+            <p>Teaching kids about money, one virtual coin at a time.</p>
             <p>&copy; 2025 PiggyLearn. All rights reserved.</p>
-            <p>PiggyLearn is a financial education app. No real money is involved.</p>
-        </div>
+            <div class="footer-links">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
