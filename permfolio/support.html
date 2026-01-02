@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Permanent Portfolio Tracker</title>
+    <style>
+        :root {
+            --navy-dark: #0a0e17;
+            --navy: #141b2d;
+            --navy-light: #1e2a45;
+            --gold: #c9a227;
+            --gold-light: #e6c452;
+            --gold-pale: #f5e6b8;
+            --text-white: #ffffff;
+            --text-light: #b8c5d6;
+            --text-muted: #6b7d99;
+            --bg-card: rgba(30, 42, 69, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text-white);
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-dark) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: var(--gold);
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: var(--text-light);
+            font-size: 1.1em;
+        }
+
+        h2 {
+            color: var(--gold);
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+            text-align: center;
+            border: 1px solid var(--navy-light);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-card h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--navy-dark);
+            padding: 14px 35px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+        }
+
+        .faq {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--navy-light);
+        }
+
+        .faq-item h3 {
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            color: var(--text-light);
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--navy-light);
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: var(--navy-light);
+            color: var(--gold);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">&#9878;</div>
+            <h1>PermFolio Support <span class="app-badge">v1.0</span></h1>
+            <p class="tagline">Permanent Portfolio Tracker - We're here to help!</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Contact Us</h3>
+            <p>Have a question or need help with PermFolio?</p>
+            <a href="mailto:permfolio@gmail.com" class="email-link">Email Us</a>
+            <p style="margin-top: 15px; color: var(--text-muted); font-size: 0.9em;">permfolio@gmail.com</p>
+        </div>
+
+        <p>We typically respond within 24-48 hours. When contacting us, please include:</p>
+        <ul>
+            <li>Your device type (iPhone/iPad)</li>
+            <li>iOS version</li>
+            <li>A description of your issue or question</li>
+            <li>Screenshots if applicable</li>
+        </ul>
+
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>What is the Permanent Portfolio strategy?</h3>
+                <p>The Permanent Portfolio is an investment strategy created by Harry Browne. It suggests dividing your investments equally (25% each) among four asset classes: stocks, long-term bonds, gold, and cash. This allocation aims to provide stability across various economic conditions.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I add holdings to my portfolio?</h3>
+                <p>Tap on any sector (Stocks, Bonds, Gold, or Cash) from the main screen, then tap the "+" button to add a new holding. Enter the ticker symbol or name and the amount you own. The app will automatically fetch current prices.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do push notifications work?</h3>
+                <p>When enabled, PermFolio monitors your portfolio allocation. If any sector drifts beyond your set threshold (default 5%), you'll receive a notification suggesting it may be time to rebalance. Notifications are checked during market hours.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I customize the allocation percentages?</h3>
+                <p>Yes! While the classic Permanent Portfolio uses 25% for each sector, you can adjust the target percentages in Settings to match your preferred allocation strategy.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I delete my data?</h3>
+                <p>Go to Settings and scroll to the bottom. You can delete individual portfolios or all your data. Alternatively, uninstalling the app will remove all locally stored data. To remove your push notification token from our servers, contact us via email.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is my data safe?</h3>
+                <p>Yes! Your portfolio data is stored locally on your device and is not uploaded to any server. We only store your device token (for push notifications) on our secure AWS infrastructure. We don't have access to your actual holdings or personal information. See our <a href="privacy.html" style="color: var(--gold);">Privacy Policy</a> for details.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why aren't prices updating?</h3>
+                <p>Prices are updated during US market hours (9:30 AM - 4:00 PM Eastern, Monday-Friday). Outside these hours, you'll see the last available prices. If prices still aren't updating, try refreshing the app or check your internet connection.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What tickers are supported?</h3>
+                <p>PermFolio supports a curated list of popular ETFs for each sector, including SPY, VTI, GLD, TLT, SHY, and more. The full list covers the most commonly used instruments for building a Permanent Portfolio.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 PermFolio. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
