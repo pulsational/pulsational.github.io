@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Absolvo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sacred-deep: #140F19;
+            --sacred-dark: #1E1726;
+            --sacred-card: #261E30;
+            --sacred-gold: #D9A459;
+            --sacred-gold-dim: rgba(217, 164, 89, 0.3);
+            --sacred-purple: #8C73B3;
+            --sacred-purple-dim: rgba(140, 115, 179, 0.2);
+            --text-light: #F2EDE6;
+            --text-muted: #A89CB5;
+            --text-dim: #7A6E87;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background: var(--sacred-deep);
+            min-height: 100vh;
+        }
+
+        /* Decorative background — floating icons */
+        .bg-decoration {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bg-icon {
+            opacity: 0.04;
+            filter: grayscale(30%);
+        }
+
+        .bg-icon-1 {
+            top: 5%;
+            left: 4%;
+            width: 100px;
+            animation: floatSlow 11s ease-in-out infinite;
+        }
+
+        .bg-icon-2 {
+            top: 48%;
+            right: 5%;
+            width: 80px;
+            animation: floatSlow 14s ease-in-out infinite reverse;
+        }
+
+        .bg-icon-3 {
+            bottom: 12%;
+            left: 10%;
+            width: 70px;
+            animation: floatSlow 9s ease-in-out infinite 2s;
+        }
+
+        /* Candlelight glows */
+        .bg-glow {
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+
+        .bg-glow-1 {
+            top: 10%;
+            left: 8%;
+            width: 140px;
+            height: 140px;
+            background: var(--sacred-gold);
+            opacity: 0.04;
+            animation: pulse 9s ease-in-out infinite;
+        }
+
+        .bg-glow-2 {
+            bottom: 20%;
+            right: 6%;
+            width: 100px;
+            height: 100px;
+            background: var(--sacred-purple);
+            opacity: 0.05;
+            animation: pulse 11s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.04; }
+            50% { transform: scale(1.3); opacity: 0.07; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            background: var(--sacred-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(217, 164, 89, 0.1);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--sacred-gold), transparent);
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 24px 20px;
+                border-radius: var(--radius-md);
+            }
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--sacred-gold-dim);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--sacred-dark) 0%, var(--sacred-card) 100%);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 30px rgba(217, 164, 89, 0.15);
+            position: relative;
+        }
+
+        .logo-container::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 50%;
+            border: 1px solid var(--sacred-gold-dim);
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 12px;
+            filter: drop-shadow(0 0 8px rgba(217, 164, 89, 0.3));
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--sacred-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-light);
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1em;
+            margin-top: 8px;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, rgba(217, 164, 89, 0.08) 0%, rgba(140, 115, 179, 0.08) 100%);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            border: 1px solid var(--sacred-gold-dim);
+            text-align: center;
+        }
+
+        .summary-box p {
+            margin: 0;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-light);
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--sacred-purple-dim);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 24px;
+            background: linear-gradient(to bottom, var(--sacred-gold), var(--sacred-purple));
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--sacred-gold);
+            font-size: 1.05em;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 2px solid var(--sacred-gold-dim);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-muted);
+        }
+
+        ul {
+            margin-left: 0;
+            margin-bottom: 16px;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 28px;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(135deg, var(--sacred-gold), var(--sacred-purple));
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        li strong {
+            color: var(--text-light);
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: var(--sacred-dark);
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
+            border: 1px solid rgba(140, 115, 179, 0.1);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95em;
+            font-weight: 600;
+            text-align: left;
+            padding: 16px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            transition: background 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(217, 164, 89, 0.05);
+        }
+
+        .faq-arrow {
+            font-size: 0.8em;
+            color: var(--sacred-gold);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-inner {
+            padding: 0 20px 16px;
+            color: var(--text-muted);
+            font-size: 0.9em;
+            line-height: 1.7;
+        }
+
+        .faq-answer-inner p {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .faq-answer-inner p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Highlight Box */
+        .highlight {
+            background: linear-gradient(135deg, rgba(217, 164, 89, 0.08) 0%, rgba(217, 164, 89, 0.04) 100%);
+            padding: 20px 24px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+            border-left: 3px solid var(--sacred-gold);
+        }
+
+        .highlight p {
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        /* Links */
+        a {
+            color: var(--sacred-gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+
+        /* Contact Box */
+        .contact {
+            background: var(--sacred-dark);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            margin-top: 36px;
+            text-align: center;
+            border: 1px solid var(--sacred-purple-dim);
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--sacred-gold);
+            color: var(--sacred-deep) !important;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-top: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(217, 164, 89, 0.2);
+        }
+
+        .email-link:hover {
+            background: var(--text-light);
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(217, 164, 89, 0.3);
+        }
+
+        /* Section accent icon */
+        .section-accent {
+            display: block;
+            margin: 0 auto 20px;
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            opacity: 0.15;
+            filter: drop-shadow(0 0 10px rgba(217, 164, 89, 0.3));
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-dim);
+            font-size: 0.9em;
+        }
+
+        .footer-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 6px rgba(217, 164, 89, 0.3));
+        }
+
+        .footer p {
+            margin-bottom: 4px;
+            color: var(--text-dim);
+        }
+
+        .footer strong {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--sacred-gold);
+        }
+
+        .footer-links {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .footer-links a:hover {
+            color: var(--sacred-gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .logo-container {
+                width: 80px;
+                height: 80px;
+            }
+
+            .logo {
+                width: 55px;
+                height: 55px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                color: #333;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                background: white;
+            }
+            .bg-decoration {
+                display: none;
+            }
+            h1, h2, h3 {
+                color: #333;
+            }
+            p, li {
+                color: #555;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative background — floating icons + glows -->
+    <img src="icon-inline-dove.png" alt="" class="bg-decoration bg-icon bg-icon-1">
+    <img src="icon-inline-prayer.png" alt="" class="bg-decoration bg-icon bg-icon-2">
+    <img src="icon-inline-scripture.png" alt="" class="bg-decoration bg-icon bg-icon-3">
+    <div class="bg-decoration bg-glow bg-glow-1"></div>
+    <div class="bg-decoration bg-glow bg-glow-2"></div>
+
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="logo-container">
+                    <img src="AppIcon.png" alt="Absolvo" class="logo">
+                </div>
+                <div class="brand-name">Absolvo</div>
+                <h1>Support</h1>
+                <p class="subtitle">We are here to help with your prayer companion.</p>
+            </div>
+
+            <div class="summary-box">
+                <p>Absolvo runs entirely on your device. Most issues can be resolved by restarting the app or checking the FAQ below. For anything else, reach out to us directly.</p>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How does Absolvo protect my privacy?</span>
+                    <span class="faq-arrow">&#x25BC;</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Absolvo is built from the ground up for privacy. The AI runs 100% on your iPhone using a local language model. Your prayers, confessions, and conversations are never sent to any server. There are no accounts, no cloud storage, and no analytics. Your spiritual life stays between you and God.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Does the app require an internet connection?</span>
+                    <span class="faq-arrow">&#x25BC;</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>No. All core features work in airplane mode. The AI prayer companion, Daily Bread scripture readings, guided prayers, and confession mode all run entirely on your device. An internet connection is only needed to purchase or restore a subscription.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>What does "burn-after-reading" mean in Confession?</span>
+                    <span class="faq-arrow">&#x25BC;</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>When you complete a confession, the absolution ceremony permanently and irreversibly deletes all confession content from your device. Nothing is saved, backed up, or recoverable. The conversation is destroyed as part of the sacred ritual of letting go.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Why does the app take a moment to load?</span>
+                    <span class="faq-arrow">&#x25BC;</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Absolvo loads a full AI language model onto your device when it starts. This takes a few seconds on first launch. Once loaded, the model stays in memory for fast responses. If the app is closed from memory by iOS, it will need to reload on the next launch.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How do I manage or cancel my subscription?</span>
+                    <span class="faq-arrow">&#x25BC;</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Go to your iPhone's <strong>Settings > Apple ID > Subscriptions</strong>. You will see Absolvo listed there. You can change your plan or cancel at any time. Cancellation takes effect at the end of the current billing period.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>I purchased Premium but it is not showing. What do I do?</span>
+                    <span class="faq-arrow">&#x25BC;</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Open the app, go to <strong>Settings</strong> (gear icon), and tap the subscription section. There is a "Restore Purchases" option. Tap it to sync your subscription status. If the issue persists, make sure you are signed into the same Apple ID that made the purchase, then contact us.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>What languages does Absolvo support?</span>
+                    <span class="faq-arrow">&#x25BC;</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Absolvo supports 6 languages: English, Simplified Chinese, Traditional Chinese, French, Spanish, and Portuguese (Brazilian). You can switch languages at any time in the app without restarting. Scripture readings, guided prayers, and the full interface are available in all supported languages.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Is the AI a real priest?</span>
+                    <span class="faq-arrow">&#x25BC;</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>No. Absolvo's AI companion adopts the persona of a compassionate parish priest to provide a familiar and comforting prayer experience, but it is an artificial intelligence language model. It is not ordained, has no sacramental authority, and interactions with it do not constitute a valid sacrament in any Christian tradition. For pastoral care, please consult your local clergy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How much storage does the app use?</span>
+                    <span class="faq-arrow">&#x25BC;</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Absolvo uses approximately 2.5 GB of storage. Most of this is the on-device AI model, which is what enables fully private, offline operation. The scripture database and guided prayer audio files account for the remaining space.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Troubleshooting</h2>
+
+            <h3>App is slow or unresponsive</h3>
+            <ul>
+                <li>Close the app completely (swipe up from the app switcher) and reopen it</li>
+                <li>Make sure your iPhone has at least 1 GB of free storage</li>
+                <li>Restart your iPhone if the issue persists</li>
+            </ul>
+
+            <h3>AI responses seem incomplete or cut off</h3>
+            <ul>
+                <li>The on-device model has a context window limit. For longer conversations, start a new prayer session</li>
+                <li>Close other memory-intensive apps to give Absolvo more resources</li>
+            </ul>
+
+            <h3>Face ID is not working for Confession</h3>
+            <ul>
+                <li>Make sure Face ID is enabled in your iPhone's Settings > Face ID & Passcode</li>
+                <li>In Absolvo, go to Settings and check that the Face ID toggle is enabled under Privacy</li>
+                <li>If your device does not support Face ID or Touch ID, the biometric lock will not be available</li>
+            </ul>
+
+            <h2>Contact Us</h2>
+
+            <p>If your question is not answered above, we would love to hear from you. We typically respond within 24 hours.</p>
+
+            <div class="contact">
+                <p class="contact-title">Reach out to the Absolvo team</p>
+                <p>Include your device model and iOS version for faster support.</p>
+                <a href="mailto:absolvoteam@gmail.com" class="email-link">
+                    <span>absolvoteam@gmail.com</span>
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <img src="AppIcon.png" alt="Absolvo" class="footer-logo">
+            <p><strong>Absolvo</strong></p>
+            <p>A private prayer companion.</p>
+            <p>&copy; 2026 Absolvo. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="support.html">Support</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
