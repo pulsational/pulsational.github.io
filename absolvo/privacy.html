@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Absolvo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sacred-deep: #140F19;
+            --sacred-dark: #1E1726;
+            --sacred-card: #261E30;
+            --sacred-gold: #D9A459;
+            --sacred-gold-dim: rgba(217, 164, 89, 0.3);
+            --sacred-purple: #8C73B3;
+            --sacred-purple-dim: rgba(140, 115, 179, 0.2);
+            --text-light: #F2EDE6;
+            --text-muted: #A89CB5;
+            --text-dim: #7A6E87;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background: var(--sacred-deep);
+            min-height: 100vh;
+        }
+
+        /* Decorative background — candlelight glows */
+        .bg-decoration {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .bg-glow-1 {
+            top: 8%;
+            left: 5%;
+            width: 120px;
+            height: 120px;
+            background: var(--sacred-gold);
+            opacity: 0.04;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .bg-glow-2 {
+            top: 55%;
+            right: 6%;
+            width: 90px;
+            height: 90px;
+            background: var(--sacred-purple);
+            opacity: 0.05;
+            animation: pulse 10s ease-in-out infinite reverse;
+        }
+
+        .bg-glow-3 {
+            bottom: 15%;
+            left: 12%;
+            width: 70px;
+            height: 70px;
+            background: var(--sacred-gold);
+            opacity: 0.03;
+            animation: pulse 7s ease-in-out infinite 2s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.04; }
+            50% { transform: scale(1.3); opacity: 0.07; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            background: var(--sacred-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(217, 164, 89, 0.1);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--sacred-gold), transparent);
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 24px 20px;
+                border-radius: var(--radius-md);
+            }
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--sacred-gold-dim);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--sacred-dark) 0%, var(--sacred-card) 100%);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 30px rgba(217, 164, 89, 0.15);
+            position: relative;
+        }
+
+        .logo-container::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 50%;
+            border: 1px solid var(--sacred-gold-dim);
+        }
+
+        .logo-icon {
+            font-size: 42px;
+            filter: drop-shadow(0 0 8px rgba(217, 164, 89, 0.3));
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--sacred-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-light);
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-dim);
+            font-size: 0.9em;
+            background: var(--sacred-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(140, 115, 179, 0.15);
+        }
+
+        .last-updated::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--sacred-gold);
+            border-radius: 50%;
+            box-shadow: 0 0 6px rgba(217, 164, 89, 0.5);
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, rgba(217, 164, 89, 0.08) 0%, rgba(140, 115, 179, 0.08) 100%);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            border: 1px solid var(--sacred-gold-dim);
+            position: relative;
+        }
+
+        .summary-box::before {
+            content: 'Your Privacy at a Glance';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--sacred-gold);
+            color: var(--sacred-deep);
+            font-size: 0.75em;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary-box p {
+            margin: 0;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-light);
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--sacred-purple-dim);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 24px;
+            background: linear-gradient(to bottom, var(--sacred-gold), var(--sacred-purple));
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--sacred-gold);
+            font-size: 1.05em;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 2px solid var(--sacred-gold-dim);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-muted);
+        }
+
+        ul {
+            margin-left: 0;
+            margin-bottom: 16px;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 28px;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(135deg, var(--sacred-gold), var(--sacred-purple));
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        li strong {
+            color: var(--text-light);
+        }
+
+        /* Highlight Box */
+        .highlight {
+            background: linear-gradient(135deg, rgba(217, 164, 89, 0.08) 0%, rgba(217, 164, 89, 0.04) 100%);
+            padding: 20px 24px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+            border-left: 3px solid var(--sacred-gold);
+        }
+
+        .highlight p {
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        .highlight.privacy-shield {
+            background: linear-gradient(135deg, rgba(140, 115, 179, 0.1) 0%, rgba(140, 115, 179, 0.05) 100%);
+            border-left-color: var(--sacred-purple);
+        }
+
+        .highlight.privacy-shield p {
+            color: var(--text-light);
+        }
+
+        /* Links */
+        a {
+            color: var(--sacred-gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+
+        /* Contact Box */
+        .contact {
+            background: var(--sacred-dark);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            margin-top: 36px;
+            text-align: center;
+            border: 1px solid var(--sacred-purple-dim);
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--sacred-gold);
+            color: var(--sacred-deep) !important;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-top: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(217, 164, 89, 0.2);
+        }
+
+        .email-link:hover {
+            background: var(--text-light);
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(217, 164, 89, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-dim);
+            font-size: 0.9em;
+        }
+
+        .footer-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 6px rgba(217, 164, 89, 0.3));
+        }
+
+        .footer p {
+            margin-bottom: 4px;
+            color: var(--text-dim);
+        }
+
+        .footer strong {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--sacred-gold);
+        }
+
+        .footer-links {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .footer-links a:hover {
+            color: var(--sacred-gold);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .service-item {
+            background: var(--sacred-dark);
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.95em;
+            border: 1px solid rgba(140, 115, 179, 0.1);
+        }
+
+        .service-item strong {
+            color: var(--sacred-gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .logo-container {
+                width: 80px;
+                height: 80px;
+            }
+
+            .logo-icon {
+                font-size: 34px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                color: #333;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                background: white;
+            }
+            .bg-decoration {
+                display: none;
+            }
+            h1, h2, h3 {
+                color: #333;
+            }
+            p, li {
+                color: #555;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative background glows -->
+    <div class="bg-decoration bg-glow-1"></div>
+    <div class="bg-decoration bg-glow-2"></div>
+    <div class="bg-decoration bg-glow-3"></div>
+
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="logo-container">
+                    <div class="logo-icon">&#x271D;</div>
+                </div>
+                <div class="brand-name">Absolvo</div>
+                <h1>Privacy Policy</h1>
+                <span class="last-updated">Last Updated: February 27, 2026</span>
+            </div>
+
+            <div class="summary-box">
+                <p>Absolvo is built on a simple principle: your prayers are between you and God. The app runs entirely on your device with no accounts, no cloud, and no data collection. Your conversations never leave your phone.</p>
+            </div>
+
+            <h2>1. Introduction</h2>
+            <p>Welcome to Absolvo ("we," "our," or "us"). Absolvo is a private Christian prayer companion app for iOS. We are deeply committed to protecting your privacy, especially given the sensitive and sacred nature of prayer and spiritual reflection.</p>
+            <p>This Privacy Policy explains how Absolvo handles your information. The short answer: <strong>we don't collect it.</strong></p>
+
+            <h2>2. Our Privacy-First Architecture</h2>
+            <div class="highlight privacy-shield">
+                <p>Absolvo is designed from the ground up to protect your privacy. The app operates <strong>100% on-device</strong> with no internet connection required. There are no user accounts, no cloud servers, and no analytics.</p>
+            </div>
+            <ul>
+                <li><strong>On-Device AI:</strong> The AI prayer companion runs entirely on your iPhone using a local language model. Your conversations are processed on your device and are never sent to any server.</li>
+                <li><strong>No Accounts:</strong> Absolvo does not require you to create an account, sign in, or provide any personal information to use the app.</li>
+                <li><strong>No Internet Required:</strong> Core features work in airplane mode. The app does not transmit your prayer content, scripture reading history, or any personal data over the internet.</li>
+                <li><strong>No Analytics or Tracking:</strong> We do not use analytics SDKs, advertising identifiers, or tracking pixels. We do not monitor how you use the app.</li>
+            </ul>
+
+            <h2>3. Information We Collect</h2>
+
+            <h3>3.1 Information We Do NOT Collect</h3>
+            <ul>
+                <li>Your name, email address, or any personal identifiers</li>
+                <li>Prayer content, confession text, or spiritual reflections</li>
+                <li>Scripture reading history or daily bread selections</li>
+                <li>Location data, contacts, or photos</li>
+                <li>Device usage analytics or behavioral data</li>
+                <li>Advertising identifiers or tracking data</li>
+            </ul>
+
+            <h3>3.2 Information Stored Locally on Your Device</h3>
+            <p>The following data is stored only on your device and is never transmitted:</p>
+            <ul>
+                <li><strong>Prayer Records:</strong> Your saved prayers are stored in the app's local database on your device. You can delete them at any time.</li>
+                <li><strong>App Preferences:</strong> Language settings, notification preferences, and streak data are stored locally.</li>
+                <li><strong>Confession Content:</strong> Confession prayers use "burn-after-reading" — the content is permanently deleted from your device after the absolution ceremony. It is never stored persistently.</li>
+            </ul>
+
+            <h3>3.3 Biometric Data</h3>
+            <p>Absolvo uses Face ID or Touch ID to protect the Confession feature. Biometric authentication is handled entirely by Apple's secure enclave on your device. Absolvo never accesses, processes, or stores your biometric data.</p>
+
+            <h2>4. Subscription Information</h2>
+            <p>Absolvo offers optional premium subscriptions and donation tiers. All payment processing is handled entirely by Apple through the App Store. We receive only:</p>
+            <ul>
+                <li>Confirmation that a subscription or purchase is active (via RevenueCat)</li>
+                <li>No payment details, credit card numbers, or billing addresses</li>
+            </ul>
+            <p>We use <strong>RevenueCat</strong> to manage subscription status. RevenueCat receives an anonymous app user ID (not linked to your identity) and subscription status. RevenueCat does not have access to your prayer content or app usage data.</p>
+
+            <h2>5. Data Sharing and Disclosure</h2>
+            <p><strong>We do not sell, share, or disclose your personal information</strong> because we do not collect it.</p>
+            <p>The only third-party service integrated into Absolvo is:</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <strong>RevenueCat</strong><br>
+                    Subscription management only<br>
+                    <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+                </div>
+                <div class="service-item">
+                    <strong>Apple App Store</strong><br>
+                    Payment processing & distribution<br>
+                    <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>
+                </div>
+            </div>
+
+            <h2>6. Data Security</h2>
+            <p>Your data is protected by multiple layers of security:</p>
+            <ul>
+                <li><strong>On-Device Processing:</strong> All AI inference happens locally — no data leaves your phone</li>
+                <li><strong>Face ID / Touch ID:</strong> Confession mode is protected by biometric authentication via Apple's secure enclave</li>
+                <li><strong>Burn-After-Reading:</strong> Confession content is permanently and irreversibly deleted after the absolution ceremony</li>
+                <li><strong>iOS Sandboxing:</strong> App data is protected by iOS's built-in sandboxing and encryption</li>
+                <li><strong>No Cloud Storage:</strong> There is no server to breach — your data exists only on your device</li>
+            </ul>
+
+            <h2>7. Data Retention</h2>
+            <p>Prayer records are stored on your device until you delete them. Confession content is automatically destroyed after the absolution ceremony. Uninstalling the app removes all locally stored data.</p>
+            <p>We retain no data on any server because we have no servers that store user data.</p>
+
+            <h2>8. Your Rights</h2>
+            <p>Because Absolvo does not collect personal data, traditional data rights (access, correction, deletion, portability) are inherently satisfied. You have complete control over all data stored on your device:</p>
+            <ul>
+                <li><strong>Access & Control:</strong> All your data is on your device, accessible to you at all times</li>
+                <li><strong>Deletion:</strong> Delete individual prayer records within the app, or uninstall to remove all data</li>
+                <li><strong>Portability:</strong> Your data lives on your device under your control</li>
+            </ul>
+
+            <h2>9. Children's Privacy</h2>
+            <p>Absolvo is not directed at children under 13. We do not knowingly collect information from children. Since the app collects no personal information from any user, there is no risk of children's data being collected or stored.</p>
+
+            <h2>10. International Users</h2>
+            <p>Absolvo is available in multiple languages (English, Simplified Chinese, Traditional Chinese, French, Spanish, and Portuguese). Since the app processes everything on-device and does not transfer data internationally, there are no cross-border data transfer concerns.</p>
+
+            <h2>11. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will post the updated policy at this URL and update the "Last Updated" date. Material changes will be noted in the app's update release notes.</p>
+
+            <h2>12. Contact Us</h2>
+            <div class="contact">
+                <p class="contact-title">Questions about our Privacy Policy?</p>
+                <p>We are happy to help.</p>
+                <a href="mailto:pulsational@gmail.com" class="email-link">
+                    <span>pulsational@gmail.com</span>
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-icon">&#x271D;</div>
+            <p><strong>Absolvo</strong></p>
+            <p>A private prayer companion.</p>
+            <p>&copy; 2026 Absolvo. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

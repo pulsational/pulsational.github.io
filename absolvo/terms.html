@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - Absolvo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sacred-deep: #140F19;
+            --sacred-dark: #1E1726;
+            --sacred-card: #261E30;
+            --sacred-gold: #D9A459;
+            --sacred-gold-dim: rgba(217, 164, 89, 0.3);
+            --sacred-purple: #8C73B3;
+            --sacred-purple-dim: rgba(140, 115, 179, 0.2);
+            --text-light: #F2EDE6;
+            --text-muted: #A89CB5;
+            --text-dim: #7A6E87;
+            --amber: #E8A838;
+            --amber-dim: rgba(232, 168, 56, 0.1);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background: var(--sacred-deep);
+            min-height: 100vh;
+        }
+
+        /* Decorative background — candlelight glows */
+        .bg-decoration {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .bg-glow-1 {
+            top: 8%;
+            left: 5%;
+            width: 120px;
+            height: 120px;
+            background: var(--sacred-gold);
+            opacity: 0.04;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .bg-glow-2 {
+            top: 55%;
+            right: 6%;
+            width: 90px;
+            height: 90px;
+            background: var(--sacred-purple);
+            opacity: 0.05;
+            animation: pulse 10s ease-in-out infinite reverse;
+        }
+
+        .bg-glow-3 {
+            bottom: 15%;
+            left: 12%;
+            width: 70px;
+            height: 70px;
+            background: var(--sacred-gold);
+            opacity: 0.03;
+            animation: pulse 7s ease-in-out infinite 2s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.04; }
+            50% { transform: scale(1.3); opacity: 0.07; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            background: var(--sacred-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(217, 164, 89, 0.1);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--sacred-gold), transparent);
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 24px 20px;
+                border-radius: var(--radius-md);
+            }
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--sacred-gold-dim);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--sacred-dark) 0%, var(--sacred-card) 100%);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 30px rgba(217, 164, 89, 0.15);
+            position: relative;
+        }
+
+        .logo-container::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 50%;
+            border: 1px solid var(--sacred-gold-dim);
+        }
+
+        .logo-icon {
+            font-size: 42px;
+            filter: drop-shadow(0 0 8px rgba(217, 164, 89, 0.3));
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--sacred-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-light);
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-dim);
+            font-size: 0.9em;
+            background: var(--sacred-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(140, 115, 179, 0.15);
+        }
+
+        .last-updated::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--sacred-gold);
+            border-radius: 50%;
+            box-shadow: 0 0 6px rgba(217, 164, 89, 0.5);
+        }
+
+        /* Important Box */
+        .important-box {
+            background: linear-gradient(135deg, rgba(217, 164, 89, 0.08) 0%, rgba(140, 115, 179, 0.08) 100%);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            border: 1px solid var(--sacred-gold-dim);
+            position: relative;
+        }
+
+        .important-box::before {
+            content: 'Overview';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--sacred-gold);
+            color: var(--sacred-deep);
+            font-size: 0.75em;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .important-box p {
+            margin: 0;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text-light);
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--sacred-purple-dim);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 24px;
+            background: linear-gradient(to bottom, var(--sacred-gold), var(--sacred-purple));
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--sacred-gold);
+            font-size: 1.05em;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 2px solid var(--sacred-gold-dim);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-muted);
+        }
+
+        ul {
+            margin-left: 0;
+            margin-bottom: 16px;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 28px;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(135deg, var(--sacred-gold), var(--sacred-purple));
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        li strong {
+            color: var(--text-light);
+        }
+
+        /* Highlight Box */
+        .highlight {
+            background: linear-gradient(135deg, rgba(217, 164, 89, 0.08) 0%, rgba(217, 164, 89, 0.04) 100%);
+            padding: 20px 24px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+            border-left: 3px solid var(--sacred-gold);
+        }
+
+        .highlight p {
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        .highlight ul {
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+
+        .highlight li {
+            color: var(--text-light);
+        }
+
+        /* Warning Box */
+        .warning {
+            background: linear-gradient(135deg, var(--amber-dim) 0%, rgba(232, 168, 56, 0.05) 100%);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+            border-left: 3px solid var(--amber);
+            position: relative;
+        }
+
+        .warning::before {
+            content: 'Please Note';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--amber);
+            color: var(--sacred-deep);
+            font-size: 0.75em;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .warning p,
+        .warning strong {
+            color: var(--text-light);
+        }
+
+        .warning ul {
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+
+        .warning li {
+            color: var(--text-muted);
+        }
+
+        /* Links */
+        a {
+            color: var(--sacred-gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+
+        /* Contact Box */
+        .contact {
+            background: var(--sacred-dark);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            margin-top: 36px;
+            text-align: center;
+            border: 1px solid var(--sacred-purple-dim);
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--sacred-gold);
+            color: var(--sacred-deep) !important;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-top: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(217, 164, 89, 0.2);
+        }
+
+        .email-link:hover {
+            background: var(--text-light);
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(217, 164, 89, 0.3);
+        }
+
+        /* Legal caps */
+        .legal-caps {
+            text-transform: uppercase;
+            font-size: 0.88em;
+            letter-spacing: 0.3px;
+            color: var(--text-muted);
+        }
+
+        /* Features Grid */
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .feature-item {
+            background: var(--sacred-dark);
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(140, 115, 179, 0.1);
+        }
+
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--sacred-gold), var(--sacred-purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sacred-deep);
+            font-size: 0.9em;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-size: 0.95em;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-dim);
+            font-size: 0.9em;
+        }
+
+        .footer-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 6px rgba(217, 164, 89, 0.3));
+        }
+
+        .footer p {
+            margin-bottom: 4px;
+            color: var(--text-dim);
+        }
+
+        .footer strong {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--sacred-gold);
+        }
+
+        .footer-links {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .footer-links a:hover {
+            color: var(--sacred-gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .logo-container {
+                width: 80px;
+                height: 80px;
+            }
+
+            .logo-icon {
+                font-size: 34px;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                color: #333;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                background: white;
+            }
+            .bg-decoration {
+                display: none;
+            }
+            h1, h2, h3 {
+                color: #333;
+            }
+            p, li {
+                color: #555;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative background glows -->
+    <div class="bg-decoration bg-glow-1"></div>
+    <div class="bg-decoration bg-glow-2"></div>
+    <div class="bg-decoration bg-glow-3"></div>
+
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="logo-container">
+                    <div class="logo-icon">&#x271D;</div>
+                </div>
+                <div class="brand-name">Absolvo</div>
+                <h1>Terms of Use</h1>
+                <span class="last-updated">Last Updated: February 27, 2026</span>
+            </div>
+
+            <div class="important-box">
+                <p>Absolvo is a <strong>private prayer companion</strong> app that uses on-device artificial intelligence to provide spiritual guidance and reflection. It is not a substitute for professional counseling, pastoral care, or the sacraments of any church.</p>
+            </div>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By downloading, installing, or using Absolvo ("the App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+            <p>These Terms constitute a legal agreement between you and Absolvo ("we," "our," or "us") governing your use of the App and any related services.</p>
+
+            <h2>2. Description of Service</h2>
+            <p>Absolvo is an iOS application that provides:</p>
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">&#x1F54A;</div>
+                    <span class="feature-text">AI prayer companion (on-device)</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#x1F4D6;</div>
+                    <span class="feature-text">Daily scripture readings</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#x1F64F;</div>
+                    <span class="feature-text">Guided prayer sessions</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#x1F512;</div>
+                    <span class="feature-text">Private confession with burn-after-reading</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#x1F4AC;</div>
+                    <span class="feature-text">Scripture-grounded Bible Q&A</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#x1F30D;</div>
+                    <span class="feature-text">6-language support</span>
+                </div>
+            </div>
+
+            <div class="warning">
+                <strong>Not a Substitute for Professional Help:</strong> Absolvo is a spiritual tool for personal reflection and prayer. It does not provide:
+                <ul>
+                    <li>Professional counseling or therapy</li>
+                    <li>Medical or mental health advice</li>
+                    <li>Official sacramental absolution or pastoral authority</li>
+                    <li>Crisis intervention services</li>
+                </ul>
+                <p style="margin-top: 12px; margin-bottom: 0;">If you are in crisis or experiencing a mental health emergency, please contact professional help immediately. The app provides crisis resource information when it detects distress.</p>
+            </div>
+
+            <h2>3. AI-Generated Content Disclaimer</h2>
+            <p>Absolvo uses an on-device artificial intelligence language model to generate prayer responses and spiritual reflections. You acknowledge and understand that:</p>
+            <ul>
+                <li><strong>AI Limitations:</strong> Responses are generated by a machine learning model and may not always be theologically accurate or appropriate for your specific situation</li>
+                <li><strong>Not Clergy:</strong> The AI prayer companion is not an ordained priest, pastor, minister, or religious authority of any kind</li>
+                <li><strong>No Sacramental Authority:</strong> Interactions with the App do not constitute a valid sacrament in any Christian tradition</li>
+                <li><strong>Personal Discernment:</strong> You should exercise your own judgment and consult qualified spiritual directors, clergy, or counselors for matters of faith and well-being</li>
+            </ul>
+
+            <h2>4. Subscriptions and Payments</h2>
+            <h3>4.1 Free and Premium Tiers</h3>
+            <p>Absolvo offers both free and premium features. The free tier provides limited access to prayer modes and scripture chat. Premium unlocks unlimited access to all features.</p>
+
+            <h3>4.2 Subscription Options</h3>
+            <ul>
+                <li><strong>Monthly Premium:</strong> Auto-renewing monthly subscription</li>
+                <li><strong>Lifetime Premium:</strong> One-time purchase for permanent access</li>
+                <li><strong>Donations:</strong> Optional one-time contributions to support development</li>
+            </ul>
+
+            <h3>4.3 Billing</h3>
+            <ul>
+                <li>All purchases are processed through the Apple App Store</li>
+                <li>Monthly subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period</li>
+                <li>You can manage or cancel your subscription in your iPhone's Settings > Apple ID > Subscriptions</li>
+            </ul>
+
+            <h3>4.4 Refunds</h3>
+            <p>Refund requests are handled by Apple according to their refund policy. We do not process refunds directly.</p>
+
+            <h2>5. Permitted Use</h2>
+            <p>You agree to use the App only for its intended purpose: private prayer, spiritual reflection, and scripture study. You agree NOT to:</p>
+            <ul>
+                <li>Use the App for any purpose that is illegal or harmful</li>
+                <li>Attempt to reverse engineer, decompile, or extract the AI model or any component of the App</li>
+                <li>Redistribute, sublicense, or commercially exploit the App or its content</li>
+                <li>Attempt to circumvent the App's subscription or payment mechanisms</li>
+                <li>Use the App in any way that could damage, disable, or impair its functionality</li>
+            </ul>
+
+            <h2>6. Scripture Content</h2>
+            <div class="highlight">
+                <p>Absolvo includes scripture passages from public domain Bible translations including the King James Version (English), Louis Segond 1910 (French), Reina-Valera 1909 (Spanish), Almeida Revista e Corrigida (Portuguese), and Chinese Union Version (Simplified and Traditional Chinese). These texts are in the public domain.</p>
+            </div>
+
+            <h2>7. Intellectual Property</h2>
+            <p>The App and all original content, features, functionality, design elements, and AI model integration are owned by Absolvo and are protected by copyright, trademark, and other intellectual property laws. Public domain scripture texts remain in the public domain. You may not copy, modify, distribute, or create derivative works of the App without our prior written consent.</p>
+
+            <h2>8. Disclaimer of Warranties</h2>
+            <p class="legal-caps">THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+            <p>We do not warrant that the App will be uninterrupted, error-free, or that AI-generated responses will be accurate, complete, or suitable for any particular purpose. The App is a tool for personal spiritual reflection and should be used with discernment.</p>
+
+            <h2>9. Limitation of Liability</h2>
+            <p class="legal-caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, ABSOLVO SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO DAMAGES FOR SPIRITUAL DISTRESS, EMOTIONAL HARM, OR RELIANCE ON AI-GENERATED CONTENT.</p>
+            <p>Our total liability for any claims arising from your use of the App shall not exceed the amount you paid us in the twelve (12) months preceding the claim.</p>
+
+            <h2>10. Indemnification</h2>
+            <p>You agree to indemnify and hold harmless Absolvo and its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of the App or violation of these Terms.</p>
+
+            <h2>11. Termination</h2>
+            <p>We may terminate or suspend your access to the App at any time for violations of these Terms. You may stop using the App at any time by uninstalling it. Upon termination, your locally stored data remains on your device under your control.</p>
+
+            <h2>12. Changes to Terms</h2>
+            <p>We may modify these Terms at any time. We will post the updated Terms at this URL and update the "Last Updated" date. Material changes will be noted in the app's update release notes. Your continued use of the App after changes constitutes acceptance of the modified Terms.</p>
+
+            <h2>13. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions.</p>
+
+            <h2>14. Dispute Resolution</h2>
+            <p>Any disputes arising from these Terms or your use of the App shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, except that either party may seek injunctive relief in any court of competent jurisdiction.</p>
+
+            <h2>15. Severability</h2>
+            <p>If any provision of these Terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.</p>
+
+            <h2>16. Contact Us</h2>
+            <div class="contact">
+                <p class="contact-title">Questions about our Terms of Use?</p>
+                <p>We are happy to help.</p>
+                <a href="mailto:pulsational@gmail.com" class="email-link">
+                    <span>pulsational@gmail.com</span>
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-icon">&#x271D;</div>
+            <p><strong>Absolvo</strong></p>
+            <p>A private prayer companion.</p>
+            <p>&copy; 2026 Absolvo. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
