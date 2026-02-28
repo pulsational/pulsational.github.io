@@ -43,43 +43,68 @@
             min-height: 100vh;
         }
 
-        /* Decorative background — candlelight glows */
+        /* Decorative background — floating icons */
         .bg-decoration {
             position: fixed;
             pointer-events: none;
             z-index: 0;
+        }
+
+        .bg-icon {
+            opacity: 0.04;
+            filter: grayscale(30%);
+        }
+
+        .bg-icon-1 {
+            top: 6%;
+            right: 4%;
+            width: 100px;
+            animation: floatSlow 12s ease-in-out infinite;
+        }
+
+        .bg-icon-2 {
+            top: 50%;
+            left: 3%;
+            width: 80px;
+            animation: floatSlow 14s ease-in-out infinite reverse;
+        }
+
+        .bg-icon-3 {
+            bottom: 10%;
+            right: 8%;
+            width: 70px;
+            animation: floatSlow 10s ease-in-out infinite 2s;
+        }
+
+        /* Candlelight glows */
+        .bg-glow {
             border-radius: 50%;
-            filter: blur(40px);
+            filter: blur(50px);
         }
 
         .bg-glow-1 {
-            top: 8%;
-            left: 5%;
-            width: 120px;
-            height: 120px;
+            top: 10%;
+            right: 6%;
+            width: 140px;
+            height: 140px;
             background: var(--sacred-gold);
             opacity: 0.04;
-            animation: pulse 8s ease-in-out infinite;
+            animation: pulse 9s ease-in-out infinite;
         }
 
         .bg-glow-2 {
-            top: 55%;
-            right: 6%;
-            width: 90px;
-            height: 90px;
+            bottom: 20%;
+            left: 5%;
+            width: 100px;
+            height: 100px;
             background: var(--sacred-purple);
             opacity: 0.05;
-            animation: pulse 10s ease-in-out infinite reverse;
+            animation: pulse 11s ease-in-out infinite reverse;
         }
 
-        .bg-glow-3 {
-            bottom: 15%;
-            left: 12%;
-            width: 70px;
-            height: 70px;
-            background: var(--sacred-gold);
-            opacity: 0.03;
-            animation: pulse 7s ease-in-out infinite 2s;
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
         }
 
         @keyframes pulse {
@@ -155,8 +180,11 @@
             border: 1px solid var(--sacred-gold-dim);
         }
 
-        .logo-icon {
-            font-size: 42px;
+        .logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 12px;
             filter: drop-shadow(0 0 8px rgba(217, 164, 89, 0.3));
         }
 
@@ -470,10 +498,24 @@
             font-size: 0.9em;
         }
 
-        .footer-icon {
-            font-size: 32px;
+        .footer-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 10px;
             margin-bottom: 10px;
             filter: drop-shadow(0 0 6px rgba(217, 164, 89, 0.3));
+        }
+
+        /* Section accent icon */
+        .section-accent {
+            display: block;
+            margin: 0 auto 20px;
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            opacity: 0.15;
+            filter: drop-shadow(0 0 10px rgba(217, 164, 89, 0.3));
         }
 
         .footer p {
@@ -523,8 +565,9 @@
                 height: 80px;
             }
 
-            .logo-icon {
-                font-size: 34px;
+            .logo {
+                width: 55px;
+                height: 55px;
             }
 
             .features-list {
@@ -556,16 +599,18 @@
     </style>
 </head>
 <body>
-    <!-- Decorative background glows -->
-    <div class="bg-decoration bg-glow-1"></div>
-    <div class="bg-decoration bg-glow-2"></div>
-    <div class="bg-decoration bg-glow-3"></div>
+    <!-- Decorative background — floating icons + glows -->
+    <img src="icon-inline-scripture.png" alt="" class="bg-decoration bg-icon bg-icon-1">
+    <img src="icon-inline-dove.png" alt="" class="bg-decoration bg-icon bg-icon-2">
+    <img src="icon-inline-prayer.png" alt="" class="bg-decoration bg-icon bg-icon-3">
+    <div class="bg-decoration bg-glow bg-glow-1"></div>
+    <div class="bg-decoration bg-glow bg-glow-2"></div>
 
     <div class="container">
         <div class="card">
             <div class="header">
                 <div class="logo-container">
-                    <div class="logo-icon">&#x271D;</div>
+                    <img src="AppIcon.png" alt="Absolvo" class="logo">
                 </div>
                 <div class="brand-name">Absolvo</div>
                 <h1>Terms of Use</h1>
@@ -661,6 +706,7 @@
             </ul>
 
             <h2>6. Scripture Content</h2>
+            <img src="icon-inline-scripture.png" alt="Scripture" class="section-accent">
             <div class="highlight">
                 <p>Absolvo includes scripture passages from public domain Bible translations including the King James Version (English), Louis Segond 1910 (French), Reina-Valera 1909 (Spanish), Almeida Revista e Corrigida (Portuguese), and Chinese Union Version (Simplified and Traditional Chinese). These texts are in the public domain.</p>
             </div>
@@ -705,7 +751,7 @@
         </div>
 
         <footer class="footer">
-            <div class="footer-icon">&#x271D;</div>
+            <img src="AppIcon.png" alt="Absolvo" class="footer-logo">
             <p><strong>Absolvo</strong></p>
             <p>A private prayer companion.</p>
             <p>&copy; 2026 Absolvo. All rights reserved.</p>
