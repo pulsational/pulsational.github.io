@@ -14,6 +14,7 @@
 ### 📖 核心指南
 - **[01-MARKET-RESEARCH.md](01-MARKET-RESEARCH.md)** - 市场调研 + 法规分析（13个城市完整对比）
 - **[campbell-cleaning-report.md](campbell-cleaning-report.md)** - 🧹 清洁公司调研（Campbell/San Jose价格+推荐）
+- **[airbnb-cleaning-fee-comparison.md](airbnb-cleaning-fee-comparison.md)** - 💰 清洁费定价指南（你应该收多少？）
 - **[02-SERVICE-PACKAGE.md](02-SERVICE-PACKAGE.md)** - 你的服务说明书（给房东看）
 - **[03-OPERATIONS-MANUAL.md](03-OPERATIONS-MANUAL.md)** - 完整运营SOP
 
