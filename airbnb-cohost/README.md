@@ -10,6 +10,7 @@
 
 ### 🎓 **新手必读（从这里开始！）**
 - **[00-AIRBNB-HOST-TRAINING.md](00-AIRBNB-HOST-TRAINING.md)** - 🔥 Airbnb Host完整培训（从注册账户到第一个客人）
+- **[04-ONBOARDING-CHECKLIST.md](04-ONBOARDING-CHECKLIST.md)** - 🏠 **从空房子到上线**（Co-host完整服务流程）
 
 ### 📖 核心指南
 - **[01-MARKET-RESEARCH.md](01-MARKET-RESEARCH.md)** - 市场调研 + 法规分析（13个城市完整对比）
