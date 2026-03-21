@@ -8,8 +8,12 @@
 
 这个文件夹包含了从0到1建立Airbnb co-host业务所需的所有资料。
 
+### 🎓 **新手必读（从这里开始！）**
+- **[00-AIRBNB-HOST-TRAINING.md](00-AIRBNB-HOST-TRAINING.md)** - 🔥 Airbnb Host完整培训（从注册账户到第一个客人）
+
 ### 📖 核心指南
 - **[01-MARKET-RESEARCH.md](01-MARKET-RESEARCH.md)** - 市场调研 + 法规分析（13个城市完整对比）
+- **[campbell-cleaning-report.md](campbell-cleaning-report.md)** - 🧹 清洁公司调研（Campbell/San Jose价格+推荐）
 - **[02-SERVICE-PACKAGE.md](02-SERVICE-PACKAGE.md)** - 你的服务说明书（给房东看）
 - **[03-OPERATIONS-MANUAL.md](03-OPERATIONS-MANUAL.md)** - 完整运营SOP
 
@@ -32,20 +36,20 @@
 
 ## 🚀 快速开始 - 第一周要做的事
 
-### Day 1-2: 调研和准备
-1. ✅ 阅读 **[01-MARKET-RESEARCH.md](01-MARKET-RESEARCH.md)**
+### Day 1-2: 学习基础 + 调研市场
+1. 🔥 **阅读 [00-AIRBNB-HOST-TRAINING.md](00-AIRBNB-HOST-TRAINING.md)** - 必读！
+   - 了解Airbnb如何运作
+   - 学习如何注册账户、创建listing
+   - 学习定价、沟通、清洁管理
+
+2. ✅ 阅读 **[01-MARKET-RESEARCH.md](01-MARKET-RESEARCH.md)**
    - 了解Campbell和San Jose法规对比
    - 了解市场行情（平均房价、入住率）
    - 确认重点城市（Campbell优先，San Jose保底）
 
-2. ✅ 申请Business License
-   - San Jose要求 (~$195/year) - [sjbizlicense.org](https://sjbizlicense.org)
-   - Campbell确认TOT证书申请流程
-
-3. ✅ 准备你的pitch
+3. ✅ （可选）准备你的pitch
    - 阅读 **[02-SERVICE-PACKAGE.md](02-SERVICE-PACKAGE.md)**
-   - 定制你的费率和服务包
-   - 打印几份给潜在房东
+   - 等你理解了怎么做host再考虑找房东
 
 ### Day 3-4: 找房东
 4. ✅ 阅读 **[FIND-LANDLORDS.md](marketing/FIND-LANDLORDS.md)**
