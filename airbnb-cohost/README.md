@@ -8,56 +8,53 @@
 
 这个文件夹包含了从0到1建立Airbnb co-host业务所需的所有资料。
 
-```
-airbnb-cohost/
-├── README.md (你在这里！)
-├── 01-MARKET-RESEARCH.md          # 市场调研 + 法规分析
-├── 02-SERVICE-PACKAGE.md          # 你的服务说明书（给房东看）
-├── 03-OPERATIONS-MANUAL.md        # 完整运营SOP
-│
-├── marketing/                      # 营销和客户获取
-│   ├── FIND-LANDLORDS.md          # 找房东策略（渠道+话术）
-│   └── first-consultation.md      # 首次咨询指南（问题清单）
-│
-├── templates/                      # 可复用模板
-│   ├── guest-messages.md          # 客人沟通模板（自动消息）
-│   ├── house-rules.md             # House Rules模板（中英双语）
-│   └── welcome-guide.md           # 欢迎指南（打印给客人）
-│
-├── operations/                     # 运营工具
-│   └── cleaning-checklist.md     # 清洁标准Checklist（给清洁团队）
-│
-└── legal/                          # 法律文档
-    └── co-host-agreement.md       # Co-host服务协议（模板）
-```
+### 📖 核心指南
+- **[01-MARKET-RESEARCH.md](01-MARKET-RESEARCH.md)** - 市场调研 + 法规分析（13个城市完整对比）
+- **[02-SERVICE-PACKAGE.md](02-SERVICE-PACKAGE.md)** - 你的服务说明书（给房东看）
+- **[03-OPERATIONS-MANUAL.md](03-OPERATIONS-MANUAL.md)** - 完整运营SOP
+
+### 📣 营销和客户获取
+- **[FIND-LANDLORDS.md](marketing/FIND-LANDLORDS.md)** - 找房东策略（渠道+话术）
+- **[first-consultation.md](marketing/first-consultation.md)** - 首次咨询指南（问题清单）
+
+### 📝 可复用模板
+- **[guest-messages.md](templates/guest-messages.md)** - 客人沟通模板（自动消息）
+- **[house-rules.md](templates/house-rules.md)** - House Rules模板（中英双语）
+- **[welcome-guide.md](templates/welcome-guide.md)** - 欢迎指南（打印给客人）
+
+### 🛠️ 运营工具
+- **[cleaning-checklist.md](operations/cleaning-checklist.md)** - 清洁标准Checklist（给清洁团队）
+
+### ⚖️ 法律文档
+- **[co-host-agreement.md](legal/co-host-agreement.md)** - Co-host服务协议（模板）
 
 ---
 
 ## 🚀 快速开始 - 第一周要做的事
 
 ### Day 1-2: 调研和准备
-1. ✅ 阅读 `01-MARKET-RESEARCH.md`
-   - 了解San Jose法规
+1. ✅ 阅读 **[01-MARKET-RESEARCH.md](01-MARKET-RESEARCH.md)**
+   - 了解Campbell和San Jose法规对比
    - 了解市场行情（平均房价、入住率）
-   - 确认重点城市（San Jose优先）
+   - 确认重点城市（Campbell优先，San Jose保底）
 
 2. ✅ 申请Business License
-   - San Jose要求 (~$195/year)
-   - 在线申请: [sjbizlicense.org](https://sjbizlicense.org)
+   - San Jose要求 (~$195/year) - [sjbizlicense.org](https://sjbizlicense.org)
+   - Campbell确认TOT证书申请流程
 
 3. ✅ 准备你的pitch
-   - 阅读 `02-SERVICE-PACKAGE.md`
+   - 阅读 **[02-SERVICE-PACKAGE.md](02-SERVICE-PACKAGE.md)**
    - 定制你的费率和服务包
    - 打印几份给潜在房东
 
 ### Day 3-4: 找房东
-4. ✅ 阅读 `marketing/FIND-LANDLORDS.md`
+4. ✅ 阅读 **[FIND-LANDLORDS.md](marketing/FIND-LANDLORDS.md)**
    - 加入Facebook群组
    - 注册Nextdoor
    - 发第一轮帖子
 
 5. ✅ 准备咨询流程
-   - 阅读 `marketing/first-consultation.md`
+   - 阅读 **[first-consultation.md](marketing/first-consultation.md)**
    - 打印问题清单
    - 创建Google Sheets追踪表
 
@@ -76,13 +73,13 @@ airbnb-cohost/
 ## 📖 按场景使用指南
 
 ### 🎯 **我想了解市场**
-→ 先读 `01-MARKET-RESEARCH.md`
+→ 先读 **[01-MARKET-RESEARCH.md](01-MARKET-RESEARCH.md)**
 
 **你会学到:**
-- San Jose vs Sunnyvale vs Mountain View vs Santa Clara的法规对比
+- San Jose vs Campbell vs Fremont vs 其他10个城市的法规对比
 - 平均房价和入住率
 - 收益模型（你能赚多少钱）
-- 推荐策略（重点城市）
+- 推荐策略（Campbell > San Jose > Fremont）
 
 ---
 
@@ -90,14 +87,14 @@ airbnb-cohost/
 → 按这个顺序:
 
 1. **咨询前** 
-   - 读 `marketing/first-consultation.md`
+   - 读 **[first-consultation.md](marketing/first-consultation.md)**
    - 准备问题清单
    - 查竞品数据（AirDNA/Airbtics）
 
 2. **咨询后 - 如果感兴趣**
-   - 发 `02-SERVICE-PACKAGE.md` 给他们
+   - 发 **[02-SERVICE-PACKAGE.md](02-SERVICE-PACKAGE.md)** 给他们
    - 安排site visit
-   - 签 `legal/co-host-agreement.md`
+   - 签 **[co-host-agreement.md](legal/co-host-agreement.md)**
 
 ---
 
@@ -105,25 +102,25 @@ airbnb-cohost/
 → 按这个顺序:
 
 1. **准备上线 (Week 1)**
-   - 读 `03-OPERATIONS-MANUAL.md` → "新房源上线流程"
+   - 读 **[03-OPERATIONS-MANUAL.md](03-OPERATIONS-MANUAL.md)** → "新房源上线流程"
    - 拍照、写描述、设定价格
    - 申请business license（如果房东没有）
    - 安装smart lock
 
 2. **创建listing**
-   - 使用 `templates/house-rules.md` 设置规则
-   - 打印 `templates/welcome-guide.md` 放在房间
+   - 使用 **[house-rules.md](templates/house-rules.md)** 设置规则
+   - 打印 **[welcome-guide.md](templates/welcome-guide.md)** 放在房间
    - 上传照片、发布!
 
 3. **运营准备**
-   - 找清洁团队（用 `operations/cleaning-checklist.md` 培训）
-   - 设置自动消息（用 `templates/guest-messages.md`）
+   - 找清洁团队（用 **[cleaning-checklist.md](operations/cleaning-checklist.md)** 培训）
+   - 设置自动消息（用 **[guest-messages.md](templates/guest-messages.md)**）
    - 测试check-in流程
 
 ---
 
 ### 📅 **日常运营**
-→ 读 `03-OPERATIONS-MANUAL.md` → "日常运营"部分
+→ 读 **[03-OPERATIONS-MANUAL.md](03-OPERATIONS-MANUAL.md)** → "日常运营"部分
 
 **每天必做:**
 - 回复新消息 (1小时内)
@@ -143,7 +140,7 @@ airbnb-cohost/
 ---
 
 ### 🧹 **安排清洁**
-→ 用 `operations/cleaning-checklist.md`
+→ 用 **[cleaning-checklist.md](operations/cleaning-checklist.md)**
 
 1. 发给清洁团队
 2. 要求他们完成后发照片
@@ -152,7 +149,7 @@ airbnb-cohost/
 ---
 
 ### 💬 **客人沟通**
-→ 用 `templates/guest-messages.md`
+→ 用 **[guest-messages.md](templates/guest-messages.md)**
 
 **所有场景都有模板:**
 - 预订确认
