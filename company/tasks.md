@@ -134,5 +134,21 @@ Scope 本次范围：[明确列出要改的子集]
 
 | ID | Task | Assignee | Reviewer | Status | Branch | PR/Commit | Files | Updated |
 |----|------|----------|----------|--------|--------|-----------|-------|---------|
-| P8-1 | Qwen 2.5 3B → Qwen 3 4B 模型升级 + think tag 过滤 | TiaoBot+ToniBot | TuanBot | DONE | qwen3-upgrade | b68b0e0+6a49506 | LLMService.swift, project.yml, StreamingHandler.swift | 2026-04-18 |
+| P8-1 | ~~Qwen 2.5 3B → Qwen 3 4B 模型升级~~ (OOM 回滚) | TiaoBot+ToniBot | TuanBot | REVERTED | qwen3-upgrade | e497e87 | LLMService.swift, project.yml | 2026-04-18 |
+| P8-2 | Prompt 瘦身调研 — 结论：929 token（15%），不需要瘦身 | ToniBot | — | DONE | — | — | — | 2026-04-18 |
+
+## Phase 9: P9 — Prompt 重写 + 产品精简
+
+| ID | Task | Assignee | Reviewer | Status | Branch | PR/Commit | Files | Updated |
+|----|------|----------|----------|--------|--------|-----------|-------|---------|
+| P9-P | 忏悔 prompt 重写（删 meta-instruction，自然流式） | TiaoBot | TuanBot | DONE | p9-prompt-rewrite | 1c181bf+cd05318 | en/it.lproj, PrayerSystemPromptTests | 2026-04-19 |
+| P9-S | 合并 Scripture Chat 模式（3→2）+ 删最近对话（-327 行） | TuanBot | TiaoBot | DONE | p9-merge-scripture-modes | 770d8ce+ca8cadd | ScriptureChatView/ViewModel, 7x lproj | 2026-04-19 |
+| P9-F | 每日计数器 Keychain 持久化 + 文案"今日" | TiaoBot | TuanBot | DONE | p9-daily-counter | 69e4889+51461b1 | MessageSendGuard, SanctuaryView, ScriptureChatView, 7x lproj | 2026-04-19 |
+| P9-T | 每日计数器 UI 测试（4 个跨功能共享额度验证） | TiaoBot | TuanBot | DONE | p9-uitest-supplement | 73bb99b+248afe9 | DailyCounterUITests.swift | 2026-04-19 |
+
+## Phase 10: P10 — PiggyLearn Maestro E2E 测试基础
+
+| ID | Task | Assignee | Reviewer | Status | Branch | PR/Commit | Files | Updated |
+|----|------|----------|----------|--------|--------|-----------|-------|---------|
+| P10-1 | Maestro E2E 32 PASS rollup → main（PR #185 + #186 + #189 整合，含 helpers/testID infra/KeyboardDoneAccessory UX 修复） | TuanBot | TroiBot | DONE | piggylearn-e2e-phase0 | #189 squash 78a36c6 (rolls up #185 76cd406 + #186 87c94bc) | 96 files / +4066 / -39 — mobile/e2e/* + 4 ui components + ~20 screens testIDs | 2026-05-04 |
 
