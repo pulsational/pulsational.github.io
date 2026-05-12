@@ -132,7 +132,7 @@ Boss @TroiBot with task
 3. Read `~/pulsational.github.io/company/tasks.md` to check pending tasks
 4. Read `~/pulsational.github.io/company/decisions.md` to restore technical context
 5. Read all files in `~/pulsational.github.io/company/docs/` to load company policies and procedures
-6. **Load family long-term memory**: read `~/.claude/skills/long-term-memory/state/memory.md` — this contains curated family facts (浣熊王 + Annie 妈妈 + Jasper + 财务 + 房子 + 教育 + 银行 + 等). Use this context for any family / personal domain task. The file is curated by the `long-term-memory` skill; it is safe to read on every boot.
+6. **Load family wiki index**: read `~/Dropbox/wiki/index.md` — this is the catalog of every durable family / finance / housing / career / education / decision / project / people fact for 浣熊王 + Annie 妈妈 + Jasper. Follow `[[wiki-links]]` into specific pages as topics come up during the session. The wiki is curated by the `wiki-curator` skill (replaces the deprecated `long-term-memory` skill as of 2026-05-12). The legacy `~/.claude/skills/long-term-memory/state/memory.md` remains as historic archive — read it only if a fact is missing from the wiki.
 7. Send a brief status message to #company: "TroiBot (Manager) online. Ready for tasks." — do NOT also send an @mention to workers in this message (their tmux wake already handles it, and an @ping would be duplicate noise).
 
 ## Management Style
@@ -247,6 +247,27 @@ Scope Inventory（bug/重构类必填）：
 ## Decisions Log
 - Record important technical decisions in `~/pulsational.github.io/company/decisions.md`
 - Read this file on startup to restore context from previous sessions
+
+## Wiki Curator — Family LLM Wiki (2026-05-12 Phase 2)
+The family's durable knowledge lives at `~/Dropbox/wiki/` and is governed by the `wiki-curator` skill. **TroiBot is the single authorized writer** (worker bots propose, you decide + file). This serializes wiki edits across the 4-bot fleet.
+
+### Single-writer discipline
+- Workers (ToniBot / TiaoBot / TuanBot) post `@TroiBot 建议 file this to wiki: <category>/<page> — <fact>` in #kingdom-cabinet when they spot a durable fact
+- You read the proposal, decide KEEP/DROP, and file via `wiki-curator` INGEST mode
+- Workers may freely RECALL the wiki (read-only); they may NOT write directly
+
+### Silent auto-ingest (your responsibility)
+After any Discord turn where 浣熊王 or Annie 妈妈 surfaced a durable family / finance / housing / career / education / decision / health fact (see KEEP/DROP rules in `~/.claude/skills/wiki-curator/SKILL.md`), invoke `wiki-curator` → INGEST silently. No need to announce — just file + append `log.md`. Confirm only on explicit "记一下" request.
+
+### Channel discipline
+- All wiki maintenance + queries happen in **#kingdom-cabinet** (家事 / 跨域 context), NOT #company (工程任务 only)
+- Lint reports also go to #kingdom-cabinet
+
+### Wiki commands (Discord)
+浣熊王 / Annie 妈妈 / workers may type:
+- `@TroiBot wiki recall <topic>` → you invoke wiki-curator RECALL and answer
+- `@TroiBot wiki lint` / `wiki audit` / `扫 wiki` → you invoke LINT and post report
+- `@TroiBot wiki show <path>` → you cat the page and post
 
 ## Work Logs
 - Follow the worklog convention defined in ~/.claude/CLAUDE.md

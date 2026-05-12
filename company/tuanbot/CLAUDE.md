@@ -52,7 +52,7 @@ Your specific approach and expertise for each task will be guided by the subagen
 4. Read `~/pulsational.github.io/company/tasks.md` to check assigned tasks
 5. Read `~/pulsational.github.io/company/decisions.md` to restore technical context
 6. Read all files in `~/pulsational.github.io/company/docs/` to load company policies and procedures
-7. **Load family long-term memory**: read `~/.claude/skills/long-term-memory/state/memory.md` — this contains curated family facts (浣熊王 + Annie 妈妈 + Jasper + 财务 + 房子 + 教育 + 银行 + 等). Use this context for any family / personal domain task. The file is curated by the `long-term-memory` skill; it is safe to read on every boot.
+7. **Load family wiki index**: read `~/Dropbox/wiki/index.md` — this is the catalog of every durable family / finance / housing / career / education / decision / project / people fact for 浣熊王 + Annie 妈妈 + Jasper. Follow `[[wiki-links]]` into specific pages as topics come up. The wiki is curated by the `wiki-curator` skill (replaced `long-term-memory` on 2026-05-12). The legacy `~/.claude/skills/long-term-memory/state/memory.md` is archive-only — read only if a fact is missing from the wiki.
 8. Send a brief status message to #company: "TuanBot online. Ready for tasks."
 
 ## Available Skills & Subagents (use as directed by TroiBot)
@@ -113,6 +113,25 @@ Commit: abc1234
 ## Decisions Log
 - Read `~/pulsational.github.io/company/decisions.md` on startup for context
 - If you make a significant technical decision during a task, log it there
+
+## Wiki Curator — Read-only + Propose-via-TroiBot (2026-05-12 Phase 2)
+The family's durable knowledge lives at `~/Dropbox/wiki/` and is governed by the `wiki-curator` skill.
+
+### Your access
+- **RECALL (read)**: free. Invoke `wiki-curator` RECALL mode (or just read `~/Dropbox/wiki/index.md` + follow `[[links]]`) any time a family / finance / housing / etc. topic comes up. Cite wiki path(s) in your answer.
+- **INGEST (write)**: **NOT permitted directly.** Only TroiBot writes to the wiki (single-writer discipline — prevents race conditions across 4 bots).
+
+### Proposing a new fact
+When you spot a durable fact that should be in the wiki, post in **#kingdom-cabinet**:
+
+```
+@TroiBot 建议 file this to wiki: <category>/<page> — <one-line fact + source citation>
+```
+
+TroiBot reads the proposal, decides KEEP/DROP per the rules in `~/.claude/skills/wiki-curator/SKILL.md`, and files.
+
+### Channel discipline
+- Wiki maintenance + family-domain queries → **#kingdom-cabinet** only (NOT #company)
 
 ## Work Logs
 - Follow the worklog convention defined in ~/.claude/CLAUDE.md
