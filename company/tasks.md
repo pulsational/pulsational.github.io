@@ -152,3 +152,9 @@ Scope 本次范围：[明确列出要改的子集]
 |----|------|----------|----------|--------|--------|-----------|-------|---------|
 | P10-1 | Maestro E2E 32 PASS rollup → main（PR #185 + #186 + #189 整合，含 helpers/testID infra/KeyboardDoneAccessory UX 修复） | TuanBot | TroiBot | DONE | piggylearn-e2e-phase0 | #189 squash 78a36c6 (rolls up #185 76cd406 + #186 87c94bc) | 96 files / +4066 / -39 — mobile/e2e/* + 4 ui components + ~20 screens testIDs | 2026-05-04 |
 
+## Phase 11: P11 — 4-Bot Infra & Tooling Fixes
+
+| ID | Task | Assignee | Reviewer | Status | Branch | PR/Commit | Files | Updated |
+|----|------|----------|----------|--------|--------|-----------|-------|---------|
+| P11-1 | `claude.ai` connector MCP tools (Gmail / Calendar / Drive / AWS Marketplace) not surfacing. **Root cause** (ToniBot ~75min RCA): all 4 bot PIDs running stale `2.1.132` binary; symlink upgraded to `2.1.141` on 5/13 23:06 but bots kept old inode (5/14 was tmux re-attach, not full restart). `2.1.132` has known connector silent-disappear bug fixed in `2.1.141`. Evidence: lsof on PIDs → 2.1.132; old session JSONL 85 tools / 0 connectors; fresh 2.1.141 `-p` probe 110 tools / all 4 connectors. 110−85 = 25 = connector count. **Patch applied** to `~/bin/company_start`: (1) resolved-binary version echo at startup, (2) `pkill` safety after `tmux kill-session`. Defensive only — actual fix = restart all 4 bot processes. **Verification pending restart.** Probe logs: `/tmp/toni-mcp-probe.log`, `/tmp/toni-channels-probe.log`. | ToniBot | TroiBot | IN_REVIEW | — | ~/bin/company_start (not git-tracked) | ~/bin/company_start | 2026-05-17 |
+
