@@ -190,7 +190,7 @@
     [
      "怎么恢复购买？",
      [
-      "以前买断过，换了手机或重新安装后：打开「我的 > 设置」，点「恢复购买」。要用当初购买时的同一个 Apple ID 登录 App Store。开通了家庭共享，家庭成员也可以这样恢复。"
+      "以前买断过，换了手机或重新安装后：打开「个人中心」，点「一次买断」，在买断页点「恢复购买（以前买过）」。要用当初购买时的同一个 Apple ID 登录 App Store。开通了家庭共享，家庭成员也可以这样恢复。"
      ]
     ],
     [
@@ -202,13 +202,13 @@
     [
      "怎么换界面语言、朗读语言、简体繁体？",
      [
-      "在「我的 > 设置」里：界面语言可以选简体中文、繁體中文或 English，题目和答案的中文跟着界面用简体或繁体；界面选 English 时，还可以另外选中文用简体还是繁体。朗读语言可以选英文、普通话或粤语。"
+      "在「个人中心 > 设置」里：界面语言可以选简体中文、繁體中文、English、Español 或 Tiếng Việt。中文界面下，题目和答案的中文跟着界面用简体或繁体。朗读一直有英文；中文界面打开「用中文朗读」后，还可以选普通话或粤语朗读。西班牙语、越南语界面打开同一项，会用西班牙语或越南语朗读。英文界面只有英文朗读。"
      ]
     ],
     [
      "怎么换回标准模式或长辈模式？",
      [
-      "在「我的 > 设置」里随时切换。长辈模式字更大、按钮更大。"
+      "在「个人中心 > 设置 > 字体大小」里随时切换。长辈模式字更大、按钮更大。"
      ]
     ],
     [
@@ -255,7 +255,7 @@
     [
      "How do I restore my purchase?",
      [
-      "If you bought the app before and have a new phone or reinstalled it, open Me > Settings and tap Restore Purchases. Sign in to the App Store with the same Apple ID you used to buy it. Family Sharing is on, so family members can restore it the same way."
+      "If you bought the app before and have a new phone or reinstalled it, open Profile, tap Buy once, then tap Restore purchase (bought before) on the purchase page. Sign in to the App Store with the same Apple ID you used to buy it. Family Sharing is on, so family members can restore it the same way."
      ]
     ],
     [
@@ -267,13 +267,13 @@
     [
      "How do I change the app language, read-aloud language or Chinese script?",
      [
-      "In Me > Settings: the app language can be Simplified Chinese, Traditional Chinese or English, and Chinese in questions and answers follows that choice. With the app in English, you can separately choose Simplified or Traditional for the Chinese. The read-aloud language can be English, Mandarin or Cantonese."
+      "In Profile > Settings: the app language can be Simplified Chinese (简体中文), Traditional Chinese (繁體中文), English, Spanish (Español) or Vietnamese (Tiếng Việt). With the app in Chinese, Chinese in questions and answers follows that choice. English audio is always there. With the app in Chinese, turn on the option to read aloud in Chinese and choose Mandarin or Cantonese. With the app in Spanish or Vietnamese, the same option reads aloud in Spanish or Vietnamese. With the app in English, audio is English only."
      ]
     ],
     [
-     "How do I switch between Standard and Senior mode?",
+     "How do I switch between Standard and Large mode?",
      [
-      "Switch any time in Me > Settings. Senior mode has larger text and bigger buttons."
+      "Switch any time in Profile > Settings > Text size. Large mode has larger text and bigger buttons."
      ]
     ],
     [
