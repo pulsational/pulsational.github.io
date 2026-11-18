@@ -1,7 +1,7 @@
 {
  "effective": {
-  "zh": "2026 年 11 月 12 日",
-  "en": "November 12, 2026"
+  "zh": "2026 年 11 月 14 日",
+  "en": "November 14, 2026"
  },
  "contact": {
   "zh": "piggylearnbank@gmail.com",
@@ -35,6 +35,7 @@
      "只存在你手机上的数据",
      [
       "设置（界面语言、朗读语言、简繁、长辈模式等）、练习记录、错题、你选定要背的答案、每天的免费次数、是否已经买断。",
+      "每天提醒、面试日、打分和分享也只存在你的手机上：「每天提醒我练习」的开关和你设的时间、你填的面试日、第一次打开应用的日期，以及应用请你打分的日期和次数（用来避免打扰你太频繁）。每天提醒是手机自己按你设的时间弹出的本地通知，不经过我们或任何服务器。分享进度时，应用只在手机上生成一张图片，发给谁由你自己选，我们收不到这张图片。",
       "你填写的邮编和州：只用来在手机上找出你那里的参议员、众议员、州长，不会发送给我们或任何第三方。",
       "这些数据不会上传给我们。删除应用，这些数据就会一起从手机上删除。"
      ]
@@ -118,6 +119,7 @@
      "Data that stays on your phone",
      [
       "Settings (app language, read-aloud language, Simplified or Traditional Chinese, Senior mode and so on), practice history, missed questions, the answers you chose to learn, your daily free sets, and whether you have bought the app.",
+      "The same goes for reminders, your interview date, rating requests and shared pictures: the on/off switch and time of the daily reminder, the interview date you enter, the date you first opened the app, and the dates and number of times the app has asked you to rate it (so it does not ask too often). The daily reminder is a notification that your phone itself shows at the time you choose; it does not go through us or any server. When you share your progress, the app makes a picture on your phone only, you choose who receives it, and we never receive it.",
       "The ZIP code and state you enter are used only on your phone to find your senators, representative and governor. They are not sent to us or to any third party.",
       "None of this is uploaded to us. Deleting the app deletes this data from your phone."
      ]
