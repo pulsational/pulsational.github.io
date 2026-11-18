@@ -78,8 +78,8 @@ for key, fname in [('privacy', 'privacy.html'), ('support', 'support.html')]:
     ]
     page(fname, f"{C[key]['zh']['title']} · {C[key]['en']['title']}", '\n'.join(parts))
 
-links = """<section class="lang"><h1>美国入籍助手 · 美國入籍助手 · Citizenship Helper</h1>
+links = """<section class="lang"><h1>美国入籍助手 · 美國入籍助手 · Citizenship Test &amp; Interview</h1>
 <p><a href="privacy.html">隐私政策 · 隱私政策 · Privacy Policy</a></p>
 <p><a href="support.html">帮助与支持 · 幫助與支援 · Help &amp; Support</a></p></section>"""
-page('index.html', 'Citizenship Helper', links)
+page('index.html', 'Citizenship Test & Interview', links)
 print(f'wrote index.html, privacy.html, support.html → {OUT}')
